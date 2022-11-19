@@ -1,6 +1,6 @@
-const dbConfig = require('../util/dbConfig');
+const dbConfig = require('../configs/dbConfig');
 // 获取分类
-const getType = (req, res) => {
+const getTableQuery = (req, res) => {
     const sql = 'select *from basic_info';
     const sqlArr = [];
     const callback = (err, data) => {
@@ -15,7 +15,7 @@ const getType = (req, res) => {
     dbConfig.sqlConnet(sql, sqlArr, callback);
 };
 
-const getCate = (req, res) => {
+const getConditionQuery = (req, res) => {
     const { id } = req.query;
     const sql = `select *from post where id = ?`;
     const sqlArr = [id];
@@ -32,6 +32,6 @@ const getCate = (req, res) => {
 };
 
 module.exports = {
-    getType,
-    getCate
+    getTableQuery,
+    getConditionQuery
 };
