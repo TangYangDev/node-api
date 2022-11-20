@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const { getTableQuery, getConditionQuery } = require('../sqlModule/query');
+const { getTableQuery, getConditionQuery } = require('../service/query');
 
 /* GET home page. */
 router.get('/', getTableQuery);

@@ -1,3 +1,8 @@
+/**
+ * SQL查询接口模块
+ * @author tangyang
+ * @dateTime 2022-11-19
+ */
 const dbConfig = require('../configs/dbConfig');
 // 获取分类
 const getTableQuery = (req, res) => {
